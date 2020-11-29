@@ -1,9 +1,9 @@
 //Sample GET REQUEST
 String ENDPOINT		= 'https://th-apex-http-callout.herokuapp.com/animals
 Http http 			= new Http();
-HttpRequest request = new HttpRequest(ENDPOINT);
+HttpRequest request = new HttpRequest();
 
-request.setEndpoint();
+request.setEndpoint(ENDPOINT);
 request.setMethod('GET');
 
 HttpResponse response = http.send(request);
